@@ -23,8 +23,8 @@ mcp = FastMCP(
 @mcp.tool()
 def execute_mongodb_query(
     query: Dict[str, Any],
-    collection_name: str = "ims data may 2025",
-    database_name: str = "ims_test_data",
+    collection_name: str = "ims_may_2025",
+    database_name: str = "pharma_data",
     projection: Optional[Dict[str, Any]] = None,
     limit: Optional[int] = None,
     sort: Optional[List[tuple]] = None,
@@ -92,7 +92,7 @@ def execute_mongodb_query(
 
 
 # --- A Resource to expose the schema to Claude ---
-@mcp.resource("mongodb://ims_test_data/ims data may 2025")
+@mcp.resource("mongodb://pharma_data/ims_may_2025")
 def get_pharma_schema() -> Dict[str, Any]:
     """Get the schema of the most relevant fields in the IMS pharmaceutical data collection."""
     return {
