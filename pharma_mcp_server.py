@@ -120,6 +120,5 @@ if __name__ == "__main__":
         host="0.0.0.0",
         port=port,
         path="/mcp",
-        log_level="info",
-        allow_session_id_passthrough=True
+        log_level="info"
     )
